@@ -1,70 +1,87 @@
-<svg width="850" height="210" viewBox="0 0 850 210" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background Card -->
-  <rect width="850" height="210" rx="12" fill="#090D16"/>
-  <rect x="0.5" y="0.5" width="849" height="209" rx="11.5" stroke="#1E293B" stroke-opacity="0.9"/>
+<svg width="850" height="220" viewBox="0 0 850 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @keyframes pulse-cyan {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.85); }
+    }
+    @keyframes glow-shift {
+      0% { stop-color: #38BDF8; }
+      50% { stop-color: #818CF8; }
+      100% { stop-color: #38BDF8; }
+    }
+    @keyframes badge-glow {
+      0%, 100% { stroke: #0284C7; stroke-opacity: 0.4; }
+      50% { stroke: #38BDF8; stroke-opacity: 0.9; }
+    }
+    .status-dot { animation: pulse-cyan 3s infinite ease-in-out; transform-origin: 14px 12px; }
+    .badge-frame { animation: badge-glow 4s infinite ease-in-out; }
+    .grad-stop-1 { animation: glow-shift 6s infinite ease-in-out; }
+  </style>
+
+  <!-- Main Background Container -->
+  <rect width="850" height="220" rx="12" fill="#090D16"/>
+  <rect x="0.5" y="0.5" width="849" height="219" rx="11.5" stroke="#1E293B" stroke-opacity="0.9"/>
   
-  <!-- Subtle Architectural Grid Pattern -->
-  <g opacity="0.04">
+  <!-- Architectural Technical Grid -->
+  <g opacity="0.05">
     <path d="M0 35H850M0 70H850M0 105H850M0 140H850M0 175H850" stroke="#F8FAFC" stroke-width="1"/>
-    <path d="M70 0V210M140 0V210M210 0V210M280 0V210M350 0V210M420 0V210M490 0V210M560 0V210M630 0V210M700 0V210M770 0V210" stroke="#F8FAFC" stroke-width="1"/>
+    <path d="M70 0V220M140 0V220M210 0V220M280 0V220M350 0V220M420 0V220M490 0V220M560 0V220M630 0V220M700 0V220M770 0V220" stroke="#F8FAFC" stroke-width="1"/>
   </g>
 
-  <!-- Left Vertical Accent Gradient Bar -->
-  <rect x="28" y="32" width="4" height="146" rx="2" fill="url(#cyan-grad)"/>
+  <!-- Left Animated Accent Bar -->
+  <rect x="28" y="34" width="4" height="152" rx="2" fill="url(#cyan-grad)"/>
 
-  <!-- Glowing Glow Overlay Behind Text -->
-  <circle cx="160" cy="105" r="90" fill="#0EA5E9" opacity="0.06" filter="blur(40px)"/>
+  <!-- Ambient Glow Effect -->
+  <circle cx="160" cy="110" r="100" fill="#0EA5E9" opacity="0.05" filter="blur(40px)"/>
 
-  <!-- Main Hero Content -->
+  <!-- Main Content Stack -->
   <g transform="translate(52, 0)">
-    <!-- Status / Role Monospace Tag -->
-    <g transform="translate(0, 34)">
-      <rect width="180" height="22" rx="4" fill="#0F172A" stroke="#1E293B"/>
-      <circle cx="12" cy="11" r="3.5" fill="#38BDF8"/>
-      <text x="24" y="15" fill="#94A3B8" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10" font-weight="600" letter-spacing="1">SYSTEM // ACTIVE PROFILE</text>
+    <!-- System Status Indicator -->
+    <g transform="translate(0, 36)">
+      <rect width="186" height="24" rx="4" fill="#0F172A" stroke="#1E293B"/>
+      <circle class="status-dot" cx="14" cy="12" r="3.5" fill="#38BDF8"/>
+      <text x="26" y="16" fill="#94A3B8" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10" font-weight="600" letter-spacing="1">SYSTEM // ACTIVE PROFILE</text>
     </g>
 
-    <!-- Primary Name -->
-    <text x="0" y="88" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="34" font-weight="800" letter-spacing="-0.8">Nivrutti Dandekar</text>
+    <!-- Name Heading -->
+    <text x="0" y="94" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="34" font-weight="800" letter-spacing="-0.8">Nivrutti Dandekar</text>
     
-    <!-- Title / Identity -->
-    <text x="0" y="120" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="500" letter-spacing="-0.2">Product Designer · Frontend Developer · AI Builder</text>
+    <!-- Role Subtitle -->
+    <text x="0" y="126" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="500" letter-spacing="-0.2">Product Designer · Frontend Developer · AI Builder</text>
     
-    <!-- Loop Badge -->
-    <g transform="translate(0, 142)">
-      <rect width="218" height="30" rx="6" fill="#0F172A" stroke="#0284C7" stroke-opacity="0.4"/>
-      <text x="14" y="19" fill="#38BDF8" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="700" letter-spacing="1.2">DESIGN → BUILD → AI</text>
+    <!-- Animated Tagline Badge -->
+    <g transform="translate(0, 148)">
+      <rect class="badge-frame" width="220" height="32" rx="6" fill="#0F172A" stroke="#0284C7" stroke-width="1.2"/>
+      <text x="14" y="20" fill="#38BDF8" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="700" letter-spacing="1.2">DESIGN → BUILD → AI</text>
     </g>
   </g>
 
-  <!-- Right Technical Spec Container -->
-  <g transform="translate(620, 34)">
-    <!-- Outer Card Frame -->
-    <rect width="200" height="142" rx="8" fill="#0F172A" fill-opacity="0.6" stroke="#1E293B"/>
+  <!-- Right Side Specification Matrix -->
+  <g transform="translate(615, 36)">
+    <rect width="205" height="148" rx="8" fill="#0F172A" fill-opacity="0.7" stroke="#1E293B"/>
     
-    <!-- Spec Rows -->
     <g transform="translate(16, 24)">
-      <text x="0" y="0" fill="#64748B" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="10" font-weight="600">PRIMARY FOCUS</text>
-      <text x="0" y="16" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="600">Product &amp; UI Systems</text>
+      <text x="0" y="0" fill="#64748B" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="10" font-weight="600" letter-spacing="0.5">PRIMARY FOCUS</text>
+      <text x="0" y="17" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="600">Product &amp; UI Systems</text>
     </g>
     
-    <g transform="translate(16, 64)">
-      <text x="0" y="0" fill="#64748B" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="10" font-weight="600">ENGINEERING</text>
-      <text x="0" y="16" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="600">React · Next.js · 3D Web</text>
+    <g transform="translate(16, 66)">
+      <text x="0" y="0" fill="#64748B" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="10" font-weight="600" letter-spacing="0.5">ENGINEERING</text>
+      <text x="0" y="17" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="600">React · Next.js · 3D Web</text>
     </g>
     
-    <g transform="translate(16, 104)">
-      <text x="0" y="0" fill="#64748B" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="10" font-weight="600">INTELLIGENCE</text>
-      <text x="0" y="16" fill="#38BDF8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="600">AI Tooling &amp; Workflows</text>
+    <g transform="translate(16, 108)">
+      <text x="0" y="0" fill="#64748B" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="10" font-weight="600" letter-spacing="0.5">INTELLIGENCE</text>
+      <text x="0" y="17" fill="#38BDF8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="600">AI Tooling &amp; Workflows</text>
     </g>
   </g>
 
   <!-- Gradients -->
   <defs>
-    <linearGradient id="cyan-grad" x1="0" y1="0" x2="0" y2="146" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#38BDF8"/>
-      <stop offset="0.5" stop-color="#0284C7"/>
-      <stop offset="1" stop-color="#0F172A"/>
+    <linearGradient id="cyan-grad" x1="0" y1="0" x2="0" y2="152" gradientUnits="userSpaceOnUse">
+      <stop class="grad-stop-1" offset="0%" stop-color="#38BDF8"/>
+      <stop offset="60%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#0F172A"/>
     </linearGradient>
   </defs>
 </svg>
