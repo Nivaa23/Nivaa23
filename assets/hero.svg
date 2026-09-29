@@ -1,0 +1,70 @@
+<svg width="850" height="210" viewBox="0 0 850 210" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Card -->
+  <rect width="850" height="210" rx="12" fill="#090D16"/>
+  <rect x="0.5" y="0.5" width="849" height="209" rx="11.5" stroke="#1E293B" stroke-opacity="0.9"/>
+  
+  <!-- Subtle Architectural Grid Pattern -->
+  <g opacity="0.04">
+    <path d="M0 35H850M0 70H850M0 105H850M0 140H850M0 175H850" stroke="#F8FAFC" stroke-width="1"/>
+    <path d="M70 0V210M140 0V210M210 0V210M280 0V210M350 0V210M420 0V210M490 0V210M560 0V210M630 0V210M700 0V210M770 0V210" stroke="#F8FAFC" stroke-width="1"/>
+  </g>
+
+  <!-- Left Vertical Accent Gradient Bar -->
+  <rect x="28" y="32" width="4" height="146" rx="2" fill="url(#cyan-grad)"/>
+
+  <!-- Glowing Glow Overlay Behind Text -->
+  <circle cx="160" cy="105" r="90" fill="#0EA5E9" opacity="0.06" filter="blur(40px)"/>
+
+  <!-- Main Hero Content -->
+  <g transform="translate(52, 0)">
+    <!-- Status / Role Monospace Tag -->
+    <g transform="translate(0, 34)">
+      <rect width="180" height="22" rx="4" fill="#0F172A" stroke="#1E293B"/>
+      <circle cx="12" cy="11" r="3.5" fill="#38BDF8"/>
+      <text x="24" y="15" fill="#94A3B8" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10" font-weight="600" letter-spacing="1">SYSTEM // ACTIVE PROFILE</text>
+    </g>
+
+    <!-- Primary Name -->
+    <text x="0" y="88" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="34" font-weight="800" letter-spacing="-0.8">Nivrutti Dandekar</text>
+    
+    <!-- Title / Identity -->
+    <text x="0" y="120" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="500" letter-spacing="-0.2">Product Designer · Frontend Developer · AI Builder</text>
+    
+    <!-- Loop Badge -->
+    <g transform="translate(0, 142)">
+      <rect width="218" height="30" rx="6" fill="#0F172A" stroke="#0284C7" stroke-opacity="0.4"/>
+      <text x="14" y="19" fill="#38BDF8" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="12" font-weight="700" letter-spacing="1.2">DESIGN → BUILD → AI</text>
+    </g>
+  </g>
+
+  <!-- Right Technical Spec Container -->
+  <g transform="translate(620, 34)">
+    <!-- Outer Card Frame -->
+    <rect width="200" height="142" rx="8" fill="#0F172A" fill-opacity="0.6" stroke="#1E293B"/>
+    
+    <!-- Spec Rows -->
+    <g transform="translate(16, 24)">
+      <text x="0" y="0" fill="#64748B" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="10" font-weight="600">PRIMARY FOCUS</text>
+      <text x="0" y="16" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="600">Product &amp; UI Systems</text>
+    </g>
+    
+    <g transform="translate(16, 64)">
+      <text x="0" y="0" fill="#64748B" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="10" font-weight="600">ENGINEERING</text>
+      <text x="0" y="16" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="600">React · Next.js · 3D Web</text>
+    </g>
+    
+    <g transform="translate(16, 104)">
+      <text x="0" y="0" fill="#64748B" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="10" font-weight="600">INTELLIGENCE</text>
+      <text x="0" y="16" fill="#38BDF8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="600">AI Tooling &amp; Workflows</text>
+    </g>
+  </g>
+
+  <!-- Gradients -->
+  <defs>
+    <linearGradient id="cyan-grad" x1="0" y1="0" x2="0" y2="146" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38BDF8"/>
+      <stop offset="0.5" stop-color="#0284C7"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+</svg>
