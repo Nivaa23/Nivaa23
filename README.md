@@ -8,15 +8,17 @@
 
 ### 01 // ABOUT
 
-<p align="center">
-  <img src="assets/about-visual.svg" alt="Design -> Build -> AI Workflow Architecture" width="100%" />
-</p>
-
 > **PRODUCT DESIGNER · FRONTEND DEVELOPER · AI BUILDER**
 > 
 > I design digital products, build modern web interfaces, and explore how AI can improve the way products are designed and built.
 > 
 > Focused on bridging the gap between product design, interactive frontend engineering, and AI-assisted workflows.
+
+<br />
+
+<p align="center">
+  <img src="assets/about-identity.svg" alt="Nivrutti Dandekar Workstation - Product Design, Frontend Build, and AI Workflows" width="100%" />
+</p>
 
 ---
 

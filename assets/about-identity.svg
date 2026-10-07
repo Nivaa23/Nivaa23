@@ -1,0 +1,189 @@
+<svg width="850" height="300" viewBox="0 0 850 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @keyframes crt-ambient {
+      0%, 100% { opacity: 0.95; }
+      50% { opacity: 0.85; }
+    }
+    @keyframes line-flow {
+      0% { stroke-dashoffset: 24; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes node-pulse {
+      0%, 100% { fill: #38BDF8; opacity: 1; }
+      50% { fill: #818CF8; opacity: 0.4; }
+    }
+    .crt-display { animation: crt-ambient 4s infinite ease-in-out; }
+    .flow-line { stroke-dasharray: 4, 4; animation: line-flow 3s infinite linear; }
+    .pulse-dot { animation: node-pulse 3s infinite ease-in-out; }
+  </style>
+
+  <!-- Single Cohesive Canvas Frame -->
+  <rect width="850" height="300" rx="12" fill="#090D16"/>
+  <rect x="0.5" y="0.5" width="849" height="299" rx="11.5" stroke="#1E293B" stroke-opacity="0.9"/>
+
+  <!-- Architectural Background Grid -->
+  <g opacity="0.035">
+    <path d="M0 35H850M0 70H850M0 105H850M0 140H850M0 175H850M0 210H850M0 245H850" stroke="#F8FAFC" stroke-width="1"/>
+    <path d="M85 0V300M170 0V300M255 0V300M340 0V300M425 0V300M510 0V300M595 0V300M680 0V300M765 0V300" stroke="#F8FAFC" stroke-width="1"/>
+  </g>
+
+  <!-- Ambient Backdrop Illumination -->
+  <circle cx="425" cy="150" r="140" fill="#0EA5E9" opacity="0.06" filter="blur(60px)"/>
+  <circle cx="152" cy="150" r="90" fill="#818CF8" opacity="0.04" filter="blur(50px)"/>
+
+  <!-- LEFT CARD: 03 // AI WORKFLOWS (Vertically centered: Y=40 to Y=260, Height=220, Center Y=150) -->
+  <g transform="translate(40, 40)">
+    <!-- Card Frame -->
+    <rect width="225" height="220" rx="10" fill="#0F172A" fill-opacity="0.85" stroke="#1E293B"/>
+    <rect x="0.5" y="0.5" width="224" height="219" rx="9.5" stroke="#0284C7" stroke-opacity="0.3"/>
+
+    <!-- LEVEL 1: HEADING -->
+    <text x="18" y="28" fill="#38BDF8" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="11" font-weight="700" letter-spacing="0.8">03 // AI WORKFLOWS</text>
+
+    <!-- LEVEL 2: NETWORK VISUAL GRAPH -->
+    <g transform="translate(18, 44)">
+      <!-- Connecting Edges -->
+      <line x1="25" y1="28" x2="80" y2="14" stroke="#334155" stroke-width="1.2"/>
+      <line x1="25" y1="28" x2="80" y2="56" stroke="#38BDF8" stroke-width="1.2"/>
+      <line x1="80" y1="14" x2="145" y2="32" stroke="#818CF8" stroke-width="1.2"/>
+      <line x1="80" y1="56" x2="145" y2="32" stroke="#38BDF8" stroke-width="1.2"/>
+      <line x1="80" y1="56" x2="80" y2="78" stroke="#334155" stroke-width="1.2"/>
+      <line x1="145" y1="32" x2="145" y2="74" stroke="#818CF8" stroke-width="1.2"/>
+
+      <!-- Node Bulbs -->
+      <circle cx="25" cy="28" r="5" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+      <circle class="pulse-dot" cx="80" cy="14" r="4" fill="#38BDF8"/>
+      <circle cx="80" cy="56" r="6.5" fill="#0F172A" stroke="#818CF8" stroke-width="1.5"/>
+      <circle cx="80" cy="56" r="2.5" fill="#818CF8"/>
+      <circle class="pulse-dot" cx="145" cy="32" r="5" fill="#38BDF8"/>
+      <circle cx="80" cy="78" r="4" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+      <circle cx="145" cy="74" r="5" fill="#0F172A" stroke="#38BDF8" stroke-width="1.5"/>
+    </g>
+
+    <!-- LEVEL 3: PROMPT / LLM ELEMENT -->
+    <g transform="translate(15, 134)">
+      <rect width="195" height="38" rx="5" fill="#090D16" stroke="#1E293B"/>
+      <text x="12" y="16" fill="#818CF8" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="9" font-weight="600">&gt; prompt_workflow.init()</text>
+      <text x="12" y="29" fill="#94A3B8" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="8">LLM · ChatGPT · Claude · Ollama</text>
+    </g>
+
+    <!-- LEVEL 4: SECONDARY BOTTOM INFORMATION LINE (EXACTLY ONE SINGLE CONTROLLED HORIZONTAL LINE) -->
+    <text x="112.5" y="198" text-anchor="middle" fill="#64748B" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="7.5" font-weight="600" letter-spacing="0.3">DESIGN SYSTEMS &amp; TOKENS  ·  AI-ASSISTED PROTOTYPING</text>
+  </g>
+
+  <!-- Connective Flow Line (Left Card -> CRT Workstation) -->
+  <path class="flow-line" d="M265 150 H 310" stroke="#38BDF8" stroke-width="1.5" opacity="0.7"/>
+
+  <!-- CENTRAL FOCAL POINT: RETRO CRT WORKSTATION (Positioned at Center Y = 150, Bounds: Y=40 to Y=260) -->
+  <g transform="translate(295, 30)">
+    <!-- Chassis Shadow -->
+    <ellipse cx="130" cy="235" rx="120" ry="10" fill="#000000" opacity="0.3"/>
+
+    <!-- CRT Outer Chassis Frame -->
+    <rect x="15" y="10" width="230" height="185" rx="16" fill="#1E293B" stroke="#334155" stroke-width="1.5"/>
+    <rect x="21" y="16" width="218" height="173" rx="12" fill="#0F172A"/>
+
+    <!-- Screen Bezel & Curved CRT Display -->
+    <rect class="crt-display" x="31" y="26" width="198" height="138" rx="8" fill="#070A10" stroke="#0284C7" stroke-opacity="0.5" stroke-width="1.2"/>
+    
+    <!-- Top Terminal Bar -->
+    <rect x="31" y="26" width="198" height="18" rx="8" fill="#0F172A"/>
+    <circle cx="43" cy="35" r="3" fill="#EF4444" opacity="0.8"/>
+    <circle cx="53" cy="35" r="3" fill="#F59E0B" opacity="0.8"/>
+    <circle cx="63" cy="35" r="3" fill="#10B981" opacity="0.8"/>
+
+    <!-- ABSTRACT GRAPHICS DISPLAYED ON CRT SCREEN -->
+    <g transform="translate(41, 52)">
+      <!-- Code Representation Geometry -->
+      <rect x="0" y="0" width="36" height="4" rx="1" fill="#818CF8"/>
+      <rect x="40" y="0" width="50" height="4" rx="1" fill="#38BDF8"/>
+      <rect x="0" y="10" width="65" height="4" rx="1" fill="#94A3B8" opacity="0.7"/>
+
+      <!-- Central Web App / Component Canvas -->
+      <rect x="0" y="22" width="115" height="58" rx="4" fill="#090D16" stroke="#1E293B"/>
+      <rect x="8" y="28" width="28" height="18" rx="2" fill="#0284C7" opacity="0.25" stroke="#38BDF8" stroke-width="0.8"/>
+      <rect x="42" y="28" width="55" height="5" rx="1" fill="#F8FAFC" opacity="0.9"/>
+      <rect x="42" y="37" width="40" height="4" rx="1" fill="#64748B"/>
+      <rect x="42" y="45" width="26" height="4" rx="1" fill="#38BDF8"/>
+
+      <!-- 3D Wireframe Cube/Mesh Graphics -->
+      <g transform="translate(130, 26)">
+        <polygon points="15,0 30,8 15,16 0,8" fill="none" stroke="#38BDF8" stroke-width="0.9"/>
+        <polygon points="15,16 30,8 30,24 15,32" fill="none" stroke="#818CF8" stroke-width="0.9"/>
+        <polygon points="15,16 0,8 0,24 15,32" fill="none" stroke="#0284C7" stroke-width="0.9"/>
+      </g>
+    </g>
+
+    <!-- CRT Control Knobs -->
+    <circle cx="215" cy="176" r="3" fill="#334155"/>
+    <circle cx="223" cy="176" r="3" fill="#334155"/>
+
+    <!-- Physical Keyboard Unit Below Monitor -->
+    <g transform="translate(28, 200)">
+      <rect width="204" height="30" rx="5" fill="#1E293B" stroke="#334155"/>
+      <!-- Keycap Grid Rows -->
+      <g transform="translate(6, 5)">
+        <!-- Row 1 -->
+        <rect x="0" y="0" width="10" height="8" rx="1.5" fill="#0F172A"/>
+        <rect x="13" y="0" width="10" height="8" rx="1.5" fill="#0F172A"/>
+        <rect x="26" y="0" width="10" height="8" rx="1.5" fill="#0F172A"/>
+        <rect x="39" y="0" width="10" height="8" rx="1.5" fill="#0F172A"/>
+        <rect x="52" y="0" width="10" height="8" rx="1.5" fill="#0F172A"/>
+        <rect x="65" y="0" width="10" height="8" rx="1.5" fill="#0F172A"/>
+        <rect x="78" y="0" width="10" height="8" rx="1.5" fill="#0F172A"/>
+        <rect x="91" y="0" width="10" height="8" rx="1.5" fill="#0F172A"/>
+        <rect x="104" y="0" width="10" height="8" rx="1.5" fill="#0F172A"/>
+        <rect x="117" y="0" width="10" height="8" rx="1.5" fill="#0F172A"/>
+        <rect x="130" y="0" width="10" height="8" rx="1.5" fill="#0F172A"/>
+        <rect x="143" y="0" width="10" height="8" rx="1.5" fill="#0F172A"/>
+        <rect x="156" y="0" width="34" height="8" rx="1.5" fill="#0284C7"/>
+
+        <!-- Row 2 -->
+        <rect x="0" y="11" width="15" height="8" rx="1.5" fill="#0F172A"/>
+        <rect x="18" y="11" width="10" height="8" rx="1.5" fill="#0F172A"/>
+        <rect x="31" y="11" width="10" height="8" rx="1.5" fill="#0F172A"/>
+        <rect x="44" y="11" width="82" height="8" rx="1.5" fill="#38BDF8" fill-opacity="0.3" stroke="#38BDF8" stroke-width="0.8"/>
+        <rect x="129" y="11" width="10" height="8" rx="1.5" fill="#0F172A"/>
+        <rect x="142" y="11" width="10" height="8" rx="1.5" fill="#0F172A"/>
+        <rect x="155" y="11" width="35" height="8" rx="1.5" fill="#0F172A"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Connective Flow Line (CRT Workstation -> Right Card) -->
+  <path class="flow-line" d="M540 150 H 585" stroke="#818CF8" stroke-width="1.5" opacity="0.7"/>
+
+  <!-- RIGHT CARD: SYSTEM ARCHITECTURE (Vertically centered: Y=40 to Y=260, Height=220, Center Y=150) -->
+  <g transform="translate(585, 40)">
+    <!-- Card Frame -->
+    <rect width="225" height="220" rx="10" fill="#0F172A" fill-opacity="0.85" stroke="#1E293B"/>
+    <rect x="0.5" y="0.5" width="224" height="219" rx="9.5" stroke="#818CF8" stroke-opacity="0.3"/>
+
+    <!-- LEVEL 1: HEADING -->
+    <text x="18" y="28" fill="#818CF8" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="11" font-weight="700" letter-spacing="0.8">SYSTEM ARCHITECTURE</text>
+
+    <!-- LEVEL 2: COMPONENT LAYOUT VISUAL -->
+    <g transform="translate(16, 44)">
+      <!-- Spatial Component Blocks -->
+      <rect x="0" y="0" width="193" height="106" rx="6" fill="#090D16" stroke="#1E293B"/>
+      <!-- Header Module -->
+      <rect x="10" y="10" width="173" height="18" rx="3" fill="#0F172A" stroke="#38BDF8" stroke-width="0.8"/>
+      <rect x="18" y="16" width="45" height="6" rx="1" fill="#38BDF8"/>
+      <rect x="140" y="16" width="35" height="6" rx="1" fill="#818CF8"/>
+
+      <!-- Main Body Columns -->
+      <rect x="10" y="34" width="52" height="62" rx="3" fill="#0F172A" stroke="#1E293B"/>
+      <rect x="16" y="42" width="40" height="15" rx="2" fill="#0284C7" opacity="0.2"/>
+      <rect x="16" y="63" width="40" height="4" rx="1" fill="#64748B"/>
+      <rect x="16" y="71" width="28" height="4" rx="1" fill="#64748B"/>
+
+      <rect x="68" y="34" width="115" height="62" rx="3" fill="#0F172A" stroke="#1E293B"/>
+      <rect x="76" y="42" width="99" height="22" rx="2" fill="#818CF8" opacity="0.15" stroke="#818CF8" stroke-width="0.8"/>
+      <rect x="76" y="71" width="45" height="4" rx="1" fill="#F8FAFC"/>
+      <rect x="76" y="81" width="70" height="4" rx="1" fill="#64748B"/>
+    </g>
+
+    <!-- LEVEL 3: BOTTOM SPECIFICATION LINE -->
+    <text x="112.5" y="198" text-anchor="middle" fill="#64748B" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="7.5" font-weight="600" letter-spacing="0.3">INTERACTION DESIGN  ·  3D CANVAS MESH</text>
+  </g>
+</svg>
